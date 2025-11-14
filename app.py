@@ -67,7 +67,7 @@ def load_and_preprocess(df, name_col, text_col, dept_col=None):
 
 
 def get_model():
-    return SentenceTransformer(r"C:\Users\TITAN\PycharmProjects\Humber2\all-MiniLM-L6-v2_local")
+    return SentenceTransformer("all-MiniLM-L6-v2_local")
 
 
 # Compute top-k matches
