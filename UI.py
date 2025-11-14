@@ -1,7 +1,6 @@
 # streamlit_app.py
 import streamlit as st
 import pandas as pd
-import matplotlib.colors as mcolors
 from app import (
     load_and_preprocess,
     compute_top_k_matches,
@@ -123,8 +122,7 @@ if internal_file and external_file:
             display_df['internal_department'] = display_df['internal_department'].str.title()
             display_df['similarity_score'] = display_df['similarity_score'].round(4)
 
-            pastel_cmap = mcolors.LinearSegmentedColormap.from_list("", ["#E0F2FF", "#4A90E2"])
-            styled_df = display_df.style.background_gradient(subset=['similarity_score'], cmap=pastel_cmap)
+    
 
             try:
                 st.dataframe(styled_df, use_container_width=True)
